@@ -1,6 +1,6 @@
 # This repo contain my learnings of kubernetes when playing with it.
 
-### You can `exec` to both pod and container within the pod
+### You can `exec` to pod or container within the pod
 
 - exec to pod
 
