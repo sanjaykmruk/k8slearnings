@@ -31,18 +31,20 @@ The Pod "command-pod" is invalid: spec: Forbidden: pod updates may not change fi
 
 ### `Kubectl logs` give lot of useful options to view the logs of the the containers inside the pod. Some useful option are:
 
-# Return snapshot logs from pod nginx with multi containers
+- Return snapshot logs from pod nginx with multi containers
 
 ``bash
   kubectl logs nginx --all-containers=true
 ```
 
- # Begin streaming the logs of the ruby container in pod web-1
+- Begin streaming the logs of the ruby container in pod web-1
  
- ```bash
+```bash
  kubectl logs -f -c ruby web-1
- ```
- # To streaming the logs from all containers in pods defined by label `app=nginx`
+```
+
+- To streaming the logs from all containers in pods defined by label `app=nginx`
+
 ```bash
 kubectl logs -f -lapp=nginx --all-containers=true
 ```
