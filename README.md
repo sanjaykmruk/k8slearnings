@@ -48,3 +48,15 @@ The Pod "command-pod" is invalid: spec: Forbidden: pod updates may not change fi
 ```bash
 kubectl logs -f -lapp=nginx --all-containers=true
 ```
+
+### To tell K8s about your `container` not pod health you write probes
+- readinessProbe       <Object>
+     Periodic probe of container service readiness. Container will be removed
+     from service endpoints if the probe fails. Cannot be updated. More info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+  
+- livenessProbe        <Object>
+     Periodic probe of container liveness. Container will be restarted if the
+     probe fails. Cannot be updated. More info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-pro
+bes 
