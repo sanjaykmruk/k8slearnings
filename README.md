@@ -60,3 +60,10 @@ kubectl logs -f -lapp=nginx --all-containers=true
      probe fails. Cannot be updated. More info:
      https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-pro
 bes 
+
+### Three ways to define a probe
+#### One and only one of the following should be specified when defining the `Probe`.
+
+- httpGet
+- exec
+- tcpSocket 
