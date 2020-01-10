@@ -13,3 +13,13 @@ kubectl exec -it <pod_name> /bin/bash
 ```bash
 kubectl exec -it <pod_name> <container_name> /bin/bash
 ```
+
+### To install curl using apt-get 
+
+- exec to container
+
+```bash
+apt-get upgrade # upgrade the apt-get to latest version and to get apt-get repointed correctly.
+apt-get update # it updates the package lists for upgrades
+apt-get install curl -y # insatlls curl
+```
