@@ -33,7 +33,7 @@ The Pod "command-pod" is invalid: spec: Forbidden: pod updates may not change fi
 
 - Return snapshot logs from pod nginx with multi containers
 
-``bash
+```bash
   kubectl logs nginx --all-containers=true
 ```
 
