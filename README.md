@@ -23,3 +23,8 @@ apt-get upgrade # upgrade the apt-get to latest version and to get apt-get repoi
 apt-get update # it updates the package lists for upgrades
 apt-get install curl -y # insatlls curl
 ```
+### You can't change every parametere in your pod yaml file. there are only certain field which can be changed.
+
+```bash
+The Pod "command-pod" is invalid: spec: Forbidden: pod updates may not change fields other than `spec.containers[*].image`, `spec.initContainers[*].image`, `spec.activeDeadlineSeconds` or `spec.tolerations` (only additions to existing tolerations)
+```
