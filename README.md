@@ -1,17 +1,17 @@
 # This repo contain my learnings of kubernetes when playing with it.
 
-### You can `exec` to pod or container within the pod
+### You can `exec` container within the pod
 
-- exec to pod
+- exec to container when there is only one container in the pod
 
 ```bash
 kubectl exec -it <pod_name> /bin/bash
 ```
 
-- exec to container within pod
+- exec to container within pod when you have multiple containers in pod
 
 ```bash
-kubectl exec -it <pod_name> <container_name> /bin/bash
+kubectl exec -it <pod_name> -c <container_name> /bin/bash
 ```
 
 ### To install curl using apt-get 
