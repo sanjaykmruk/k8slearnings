@@ -75,4 +75,13 @@ bes
 - runAsUser  <integer> : The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified.
 - runAsGroup <integer> : The GID to run the entrypoint of the container process. Uses runtime default if unset. 
   
-  
+### Label are defined under the metadata tag of a resource in k8s.
+
+#### labels are Map of string keys and values that can be used to organize and categorize (scope and select) objects 
+
+```bash
+metadata:
+  labels:
+    name: my-lable
+```
+#### Use by match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
