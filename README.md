@@ -69,7 +69,9 @@ bes
 - tcpSocket 
 
 ### Security Context can be defined at pod level as well as container level. container inherit the security context of pod if not defined. If security context is defined at both level then container security context takes precedence.
+
 ##### Out of various feilds defined in the security context, below two at most common.
+
 - runAsUser  <integer> : The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified.
 - runAsGroup <integer> : The GID to run the entrypoint of the container process. Uses runtime default if unset. 
   
