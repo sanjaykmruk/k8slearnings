@@ -122,3 +122,25 @@ kubectl rollout history --revision=<revision_number>  deployments  <deployment-n
 kubectl rollout undo --to-revision=<revision_number> deployments <deployment_name>
 ```
 
+### Accessing pod using service
+#### Three types of ports for a service
+- nodePort - a static port assigned on each the node
+- port - port exposed internally in the cluster
+- targetPort - the container port to send requests to
+
+#### Reaching container through service cofiguration
+- use service `culsterIP` with `port` to reach the pods referenced by service
+- use any of the `Node Ip` with `nodePort` to reach the pods referenced by service>
+- use `pod Ip` (pod hosting the container) with `targetPort` to reach the pods referenced by service>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
