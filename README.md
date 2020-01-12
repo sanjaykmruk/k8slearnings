@@ -86,3 +86,39 @@ metadata:
     name: my-lable
 ```
 #### Use by match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+
+### `selectors` are counterpart of `labels` and used by replication controllers and services to select pods based on labels.
+
+
+### Deployments strategy tells K8s how to replace existing pods with new ones.
+
+#### `strategy` has two feild to define.
+
+- type          -> Can be "Recreate" or "RollingUpdate". `Default is RollingUpdate`.
+- rollingUpdate -> Present only if DeploymentStrategyType = RollingUpdate. Since default DeploymentStrategyType is RollingUpdate. Most probably you have to define it.
+
+#### `rollingUpdate` has two feild to define
+
+- maxSurge         -> The maximum number of pods that can be scheduled above the desired number of pods
+- maxUnavailable   -> The maximum number of pods that can be unavailable during the update. 
+
+### Kubectl command for `rollout` exisitng `deployments`
+
+- To view rollout history of a deployment
+
+```bash
+kubectl rollout history deploymnets <deployment-name>
+```
+
+- To view details about a rollout
+
+```bash
+kubectl rollout history --revision=<revision_number>  deployments  <deployment-name>
+```
+
+- To roll back to previous version of deploymnet
+
+```bash
+kubectl rollout undo --to-revision=<revision_number> deployments <deployment_name>
+```
+
