@@ -1,5 +1,8 @@
 # This repo contain my learnings of kubernetes when playing with it.
 
+### Kubectl Overview
+- https://kubernetes.io/docs/reference/kubectl/overview/
+
 ### You can `exec` container within the pod
 
 - exec to container when there is only one container in the pod
